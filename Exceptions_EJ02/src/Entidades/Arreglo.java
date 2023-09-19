@@ -11,7 +11,7 @@ public class Arreglo {
 
     public void mostrar() throws Exception_Array {
         try {
-            int i = 2;
+            int i = 1;
             if(i > 4) throw new Exception_Array("El indice se pasó de 4");
             if(i<0) throw new Exception_Array("El indice es menor que 0");
             System.out.println(v[i]);
