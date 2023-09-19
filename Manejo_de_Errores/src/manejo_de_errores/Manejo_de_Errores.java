@@ -5,10 +5,13 @@
  */
 package manejo_de_errores;
 
+import Entidad.Calculadora;
+
 public class Manejo_de_Errores {
 
     public static void main(String[] args) {
-        
+        Calculadora c = new Calculadora();
+        c.suma();
     }
     
 }
