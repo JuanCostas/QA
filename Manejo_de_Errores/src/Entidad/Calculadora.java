@@ -5,6 +5,7 @@
  */
 package Entidad;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculadora {
@@ -16,12 +17,10 @@ public class Calculadora {
         
         try{
             a = read.nextDouble();
-        } catch(Exception e){
+            b = read.nextDouble();
+        } catch(InputMismatchException e){
             System.out.println("no es un number");
-            a = 3;
         }
-        
-        b = read.nextDouble();
         return a+b;
     }
 }

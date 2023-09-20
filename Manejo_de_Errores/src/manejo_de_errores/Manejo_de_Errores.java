@@ -11,7 +11,7 @@ public class Manejo_de_Errores {
 
     public static void main(String[] args) {
         Calculadora c = new Calculadora();
-        c.suma();
+        System.out.println(c.suma());
     }
     
 }
