@@ -14,7 +14,6 @@ public class Calculadora {
     
     public double suma(){
         Scanner read = new Scanner(System.in);
-        
         try{
             a = read.nextDouble();
             b = read.nextDouble();

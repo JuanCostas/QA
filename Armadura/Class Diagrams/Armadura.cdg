@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Armadura">
+  <ClassDiagramComponents>
+    <Class name="Armadura" package="" visibility="protected" xPosition="18.0" yPosition="86.0">
+      <Fields>
+        <Field name="nivelSalud" type="int" visibility="protected"/>
+        <Field name="nivelEnergia" type="float" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="reparandoDanio" returnType="void" visibility="public"/>
+        <Method name="revisandoDispositivos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Casco" package="" visibility="protected" xPosition="325.0" yPosition="15.0">
+      <Fields>
+        <Field name="consola" type="String" visibility="protected"/>
+        <Field name="sintetizador" type="String" visibility="protected"/>
+        <Field name="sufriendoDanios" type="boolean" visibility="protected"/>
+        <Field name="radar" type="Radar" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="mostrandoEstado" returnType="void" visibility="public"/>
+        <Method name="estadoBateria" returnType="void" visibility="public"/>
+        <Method name="infoReactor" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Bota" package="" visibility="protected" xPosition="278.0" yPosition="300.0">
+      <Fields>
+        <Field name="propulsor" type="int" visibility="protected"/>
+        <Field name="sufriendoDanios" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="caminar" returnType="int" visibility="public">
+          <Argument type="int" name="intensidad"/>
+          <Argument type="int" name="tiempo"/>
+        </Method>
+        <Method name="correr" returnType="int" visibility="public">
+          <Argument type="int" name="intensidad"/>
+          <Argument type="int" name="tiempo"/>
+        </Method>
+        <Method name="propulsarse" returnType="int" visibility="public">
+          <Argument type="int" name="intensidad"/>
+          <Argument type="int" name="tiempo"/>
+        </Method>
+        <Method name="volar" returnType="int" visibility="public">
+          <Argument type="int" name="intensidad"/>
+          <Argument type="int" name="tiempo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Guante" package="" visibility="public" xPosition="18.0" yPosition="326.0">
+      <Fields>
+        <Field name="propulsor" type="int" visibility="protected"/>
+        <Field name="sufriendoDanios" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="volar" returnType="int" visibility="public">
+          <Argument type="int" name="intensidad"/>
+          <Argument type="int" name="tiempo"/>
+        </Method>
+        <Method name="armas" returnType="int" visibility="public">
+          <Argument type="int" name="intensidad"/>
+          <Argument type="int" name="tiempo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Radar" package="" visibility="public" xPosition="582.0" yPosition="300.0">
+      <Fields>
+        <Field name="objetos" type="Objeto[]" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="altitud" returnType="void" visibility="public"/>
+        <Method name="detectar" returnType="void" visibility="public"/>
+        <Method name="simulador" returnType="void" visibility="public"/>
+        <Method name="destruyendoEnemigos" returnType="void" visibility="public"/>
+        <Method name="accionesEvasivas" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Objeto" package="" visibility="public" xPosition="633.0" yPosition="15.0">
+      <Fields>
+        <Field name="x" type="double" visibility="protected"/>
+        <Field name="y" type="double" visibility="protected"/>
+        <Field name="z" type="double" visibility="protected"/>
+        <Field name="dureza" type="int" visibility="protected"/>
+        <Field name="hostilidad" type="boolean" visibility="protected"/>
+        <Field name="tipoObjeto" type="String" visibility="protected"/>
+        <Field name="estatico" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="distancia" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="objetos" source="Radar" target="Objeto" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <HasRelation name="radar" source="Casco" target="Radar" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Bota" target="Armadura"/>
+    <IsRelation name="is" source="Casco" target="Armadura"/>
+    <IsRelation name="is" source="Guante" target="Armadura"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
