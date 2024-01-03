@@ -1,0 +1,7 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.project.sourcePaths": [
+        "Pruebas con cucumber"
+    ],
+    "maven.view": "flat"
+}
