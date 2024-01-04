@@ -1,10 +1,13 @@
 package Entity;
 
 public class DisplayMatrix {
+    /*Numero de filas de la matriz que para este caso son 10 numero por lo que se definen 10 filas*/
     private int n = 10;
+    /*Cantidad de columnas de la matriz que para este caso son 7 segmentos por lo que se definen 7 columnas*/
     private int m = 7;
+    /*Matriz definida commo: cada fila es el numero a representar y cada columna es el estado de cada segmento para lograrlo*/
                                 /*   a  b  c  d  e  f  g  */
-    public int[][] matrix7Seg = {   {1, 1, 1, 1, 1, 1, 0},/* 0*/
+    private int[][] matrix7Seg = {  {1, 1, 1, 1, 1, 1, 0},/* 0*/
                                     {0, 1, 1, 0, 0, 0, 0},/* 1*/
                                     {1, 1, 0, 1, 1, 0, 1},/* 2*/
                                     {1, 1, 1, 1, 0, 0, 1,},/* 3*/
@@ -16,6 +19,7 @@ public class DisplayMatrix {
                                     {1, 1, 1, 1, 0, 1, 1}/* 9*/
     };
 
+    public DisplayMatrix(){}
     public int getM() {
         return m;
     }
@@ -28,14 +32,4 @@ public class DisplayMatrix {
         return matrix7Seg;
     }
 
-    public DisplayMatrix(){}
-
-    public void Mostrat_Matriz(){
-        for (int i=0; i < n; i++){
-            for (int j=0; j<m; j++){
-                System.out.print(matrix7Seg[i][j]+" ");
-            }
-            System.out.println();
-        }
-    }
 }
