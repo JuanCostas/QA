@@ -6,13 +6,13 @@ import java.util.Scanner;
 
 public class ServicioDisplay {
     private DisplayMatrix m = new DisplayMatrix();
-    /**/
+    /*Declaracion de la variable que dara dimension al vector de numeros ingresados por el usuario*/
     private int n;
-    /**/
+    /*Vector de numeros que almacenara los ingresados por el usuario*/
     private int[] number;
-    /**/
+    /*Define la variable para leer por teclado usando la nueva linea como delimitador*/
     Scanner scan = new Scanner(System.in).useDelimiter("\n");
-    /**/
+    /*Define el vector que representa el estado inicial de todos los segmentos apagados y que ira variando conforme se ejecute la funcion que compara los segmentos*/
     private int[] sevenseg = {0, 0, 0, 0, 0, 0, 0};
 
     /*Funcion para cargar los numeros, faltarian los controles de la cantidad de test entre 1 y 1000, la cantidad de numeros y que estos esten entre 0 y 9*/
